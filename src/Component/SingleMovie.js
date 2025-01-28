@@ -15,7 +15,9 @@ const SingleMovie = () => {
         const fetchMovie = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get(`http://localhost:3001/movies/${id}`);
+                const response = await axios.get(`https://movies-321.netlify.app/movies/${id}`); // Replace with your API endpoint
+
+                // const response = await axios.get(`http://localhost:3001/movies/${id}`);
                 setMovie(response.data);
             } catch (err) {
                 setError("Failed to load movie details");

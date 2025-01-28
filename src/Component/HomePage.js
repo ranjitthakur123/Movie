@@ -28,7 +28,10 @@ const HomePage = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/movies"); // Replace with your API endpoint
+       
+        // const response = await axios.get("http://localhost:3001/movies"); // Replace with your API endpoint
+        const response = await axios.get(" https://movies-321.netlify.app/movies"); // Replace with your API endpoint
+
         setMovies(response.data);
       } catch (error) {
         console.error("Error fetching movies:", error);
